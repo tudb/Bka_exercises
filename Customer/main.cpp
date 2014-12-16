@@ -1,6 +1,6 @@
-#include <D:\BKAV Training\Bai tap\Customer\X.h>
-#include <d:\bkav training\bai tap\customer\Y.h>
-#include <d:\bkav training\bai tap\customer\Z.h>
+#include "X.h"
+#include "Y.h"
+#include "Z.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -30,6 +30,8 @@ int StringToInt(string str){
 	int nTotal = 0; 
 		while (!fileRead.eof()){
 			string sName;
+			if (int(fileRead.tellg()) != fileRead.beg)
+				fileRead.ignore();
 			getline(fileRead, sName);
 			int nAmount;
 			int nPrice;
@@ -37,7 +39,8 @@ int StringToInt(string str){
 			fileRead >> nAmount;
 			fileRead >> nPrice;
 			nPosition = fileRead.tellg();
-			fileRead >> sYear;
+			fileRead.ignore();
+			getline(fileRead, sYear);
 			if (!is_number(sYear)){
 				if (nCode == 0){
 					X x;
@@ -59,7 +62,7 @@ int StringToInt(string str){
 					fileWrite << sName << endl;
 					fileWrite << nTemp << endl; 
 				}
-				fileRead.seekg(nPosition);
+				fileRead.seekg(nPosition, ios::beg);
 			}
 			else {
 				nCode = 1;
