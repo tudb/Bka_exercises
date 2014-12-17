@@ -38,8 +38,7 @@ Rectangle Rectangle::combine(Rectangle& oRetangle){
 	return oTemp;
 }
 
-
-vector<Rectangle> ListRectangle(string sFile){
+vector<Rectangle> Rectangle::ListRectangle(string sFile){
 	vector<Rectangle> List;
 	char key;
 	ifstream read(sFile, ios::in);
@@ -63,5 +62,6 @@ vector<Rectangle> ListRectangle(string sFile){
 			}
 	}
 	read.close();
+	return List;
 }
 

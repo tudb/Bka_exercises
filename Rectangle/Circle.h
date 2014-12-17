@@ -1,6 +1,7 @@
 #pragma once
 #include "Rectangle.h"
 #include "PointBase.h"
+#include <fstream>
 #include <iostream>
 class Circle{
 private:
@@ -15,5 +16,6 @@ public:
 	void setCentre(PointBase oPoint);
 	void setRadius(float fRadius);
 	Rectangle getForce();
+	vector<Circle> ListCircle(string sFile);
 };
 

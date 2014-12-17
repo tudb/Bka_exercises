@@ -18,4 +18,5 @@ public:
 	void setPoint(PointBase *pPoint);
 	Rectangle getForce();
 	void display();
+	vector<Triangle> ListTriangle(string sFile);
 };

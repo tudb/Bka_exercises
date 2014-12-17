@@ -1,5 +1,6 @@
 #pragma once
 #include "PointBase.h"
+#include <vector>
 #include <iostream>
 using namespace std;
 

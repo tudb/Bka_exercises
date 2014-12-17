@@ -1,4 +1,5 @@
 #include "Circle.h"
+using namespace std;
 
 Circle::Circle(){
 	m_fRadius = 0;
@@ -37,3 +38,27 @@ Rectangle Circle::getForce(){
 	return oTemp;
 }
 
+vector<Circle> Circle::ListCircle(string sFile){
+	vector<Circle> List;
+	char key;
+	ifstream read(sFile, ios::in);
+	while (!read.eof()){
+		read >> key;
+		Circle oTemp;
+		float fAbscissa;
+		float fOrdane;
+		PointBase oPoint;
+		float fRadius;
+		if (!isdigit(key)) 
+			if (key == 'T') {
+				read >> fAbscissa >> fOrdane >> fRadius;
+				oPoint.setAbscissa(fAbscissa);
+				oPoint.setOrdane(fOrdane);
+				oTemp.setCentre(oPoint);
+				oTemp.setRadius(fRadius);
+				List.push_back(oTemp);
+			}
+	}
+	read.close();
+	return List;
+}

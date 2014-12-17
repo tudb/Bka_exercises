@@ -45,4 +45,28 @@ Rectangle Triangle::getForce(){
 	oTemp.setPoint(oPoint);
 	return oTemp;
 }
+vector<Triangle> Triangle::ListTriangle(string sFile){
+	vector<Triangle> List;
+	char key;
+	ifstream read(sFile, ios::in);
+	while (!read.eof()){
+		read >> key;
+		Triangle oTemp;
+		float fAbscissa[3];
+		float fOrdane[3];
+		PointBase oPoint[3];
+		if (!isdigit(key)) 
+			if (key == 'G') {
+				for (int nCount = 0; nCount < 3; nCount ++){
+				read >> fAbscissa[nCount] >> fOrdane[nCount];
+				oPoint[nCount].setAbscissa(fAbscissa[nCount]);
+				oPoint[nCount].setOrdane(fOrdane[nCount]);
+				}
+				oTemp.setPoint(oPoint);
+				List.push_back(oTemp);
+			}
+	}
+	read.close();
+	return List;
+}
 
