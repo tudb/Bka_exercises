@@ -1,6 +1,7 @@
 #pragma once
 #include "PointBase.h"
 #include <vector>
+#include <fstream>
 #include <iostream>
 using namespace std;
 
@@ -20,6 +21,7 @@ public:
 	void setPoint(PointBase oPoint);
 	Rectangle combine(Rectangle& oRectangle);
 	void display();
-	vector<Rectangle> ListRectangle();
+	vector<Rectangle> ListRectangle(string  sFile);
+	void write(string sFile);
 };
 

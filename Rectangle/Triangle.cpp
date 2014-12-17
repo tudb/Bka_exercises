@@ -3,24 +3,28 @@ using namespace std;
 
 
 Triangle::Triangle(){
-	m_pPoint = new PointBase[3];
 }
 
 
 Triangle::~Triangle(){
-	delete (m_pPoint);
 }
 
-Triangle::Triangle(PointBase *pPoint){
-	m_pPoint = pPoint;
+Triangle::Triangle(PointBase pPoint[3]){
+	for (int nCount = 0; nCount < 3; nCount++){
+		m_pPoint[nCount].setAbscissa(pPoint[nCount].getAbscissa());
+		m_pPoint[nCount].setOrdane(pPoint[nCount].getOrdane());
+	}
 }
 
 PointBase* Triangle::getPoint(){
 	return m_pPoint;
 }
 
-void Triangle::setPoint(PointBase *pPoint){
-	m_pPoint = pPoint;
+void Triangle::setPoint(PointBase pPoint[3]){
+	for (int nCount = 0; nCount < 3; nCount++){
+		m_pPoint[nCount].setAbscissa(pPoint[nCount].getAbscissa());
+		m_pPoint[nCount].setOrdane(pPoint[nCount].getOrdane());
+	}
 }
 
 Rectangle Triangle::getForce(){

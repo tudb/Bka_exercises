@@ -18,6 +18,14 @@ float Geometry::getOrdane(){
 	return m_fOrdane;
 }
 
+void Geometry::setAbscissa(float fAbscissa){
+	m_fAbscissa = fAbscissa;
+}
+
+void Geometry::setOrdane(float fOrdane){
+	m_fOrdane = fOrdane;
+}
+
 void Geometry::import(){
 	cout << "Nhap hoanh do: " << endl;
 	cin >> m_fAbscissa;
@@ -28,4 +36,7 @@ void Geometry::import(){
 void Geometry::display(){
 	cout << endl << "Hoanh do: " << m_fAbscissa;
 	cout << endl << "Tung do " << m_fOrdane;
+}
+
+void Geometry::draw(){
 }

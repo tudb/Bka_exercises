@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polynomial", "Polynomial\Po
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rectangle", "Rectangle\Rectangle.vcxproj", "{5E46A34A-1F1F-4787-85B4-16C03DC50E03}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hotel", "Hotel\Hotel.vcxproj", "{5A3E5E16-45E3-4B4E-8154-6F60B05A69EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -115,6 +117,10 @@ Global
 		{5E46A34A-1F1F-4787-85B4-16C03DC50E03}.Debug|Win32.Build.0 = Debug|Win32
 		{5E46A34A-1F1F-4787-85B4-16C03DC50E03}.Release|Win32.ActiveCfg = Release|Win32
 		{5E46A34A-1F1F-4787-85B4-16C03DC50E03}.Release|Win32.Build.0 = Release|Win32
+		{5A3E5E16-45E3-4B4E-8154-6F60B05A69EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5A3E5E16-45E3-4B4E-8154-6F60B05A69EA}.Debug|Win32.Build.0 = Debug|Win32
+		{5A3E5E16-45E3-4B4E-8154-6F60B05A69EA}.Release|Win32.ActiveCfg = Release|Win32
+		{5A3E5E16-45E3-4B4E-8154-6F60B05A69EA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 #include "Rectangle.h"
+using namespace std;
 
 Rectangle::Rectangle(){
 	m_fLength = 0;
@@ -13,11 +14,32 @@ Rectangle::Rectangle(PointBase oPoint, float fLength, float fWidth){
 	m_fWidth = fWidth;
 }
 
-Rectangle::~Rectangle(void){
+Rectangle::~Rectangle(){
 }
- void Rectangle::setPoint(PointBase oPoint){
-	 m_oPoint = oPoint;
- }
+
+float Rectangle::getLength(){
+	return m_fLength;
+}
+
+float Rectangle::getWidth(){
+	return m_fWidth;
+}
+
+PointBase Rectangle::getPoint(){
+	return m_oPoint;
+}
+
+void Rectangle::setLength(float fLength){
+	m_fLength = fLength;
+}
+
+void Rectangle::setWidth(float fWidth){
+	m_fWidth = fWidth;
+}
+
+void Rectangle::setPoint(PointBase oPoint){
+	m_oPoint = oPoint;
+}
 
 Rectangle Rectangle::combine(Rectangle& oRetangle){
 	Rectangle oTemp;
@@ -65,3 +87,17 @@ vector<Rectangle> Rectangle::ListRectangle(string sFile){
 	return List;
 }
 
+void Rectangle::write(string sFile){
+	ofstream check(sFile);
+	ofstream write;
+	if (!check)
+		write.open(sFile, ios::out);
+	else 
+		write.open(sFile, ios::ate);
+	if (write.is_open()) {
+		write << m_oPoint.getAbscissa() << "  " << m_oPoint.getOrdane()<< "  " << m_fLength<< "  " << m_fWidth <<endl;
+		write.close();
+		cout << "Complete" << endl;
+	}
+	else cout << "Cannot open file" << endl;
+}

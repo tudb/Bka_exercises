@@ -45,19 +45,28 @@
     <ClCompile Include="dibutil.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainTemp.cxx">
+    <ClCompile Include="Geometry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Draw\main.cpp">
+    <ClCompile Include="Circle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Draw\Geometry.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Draw\Ellipse.cpp">
+    <ClCompile Include="RectangleFake.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Draw\Circle.cpp">
+    <ClCompile Include="ShapeSpecial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Trapezium.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Parallelogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,13 +86,22 @@
     <ClInclude Include="dibutil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Draw\Circle.h">
+    <ClInclude Include="ShapeSpecial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Draw\Ellipse.h">
+    <ClInclude Include="Geometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Draw\Geometry.h">
+    <ClInclude Include="Trapezium.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleFake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Parallelogram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
