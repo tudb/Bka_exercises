@@ -4,28 +4,44 @@
 #include <fstream>
 using namespace std;
 
-void writef(strinh sFile, float *fSave, Polynomial oPolynomial){
-	for (int nCount =0; nCount <= 2; nCount++){
-		write << oPolynomial.Calculator(*(fSave + nCount));
+void writeTitle(string sFile, int nCount,float *pNumber){
+	ofstream writec(sFile, ios::out|ios::app);
+	writec << endl;
+	for (int nCountT =0; nCountT < nCount; nCountT++)
+		writec <<  *(pNumber + nCountT) << " ";
+	writec << endl;
+	writec.close();
+}
+void writef(string sFile, float *fSave, int nAmount,  Polynomial oPolynomial){
+	ofstream write(sFile , ios::app|ios::out);
+	for (int nCount =0; nCount < nAmount; nCount++){
+		write << oPolynomial.Calculator(*(fSave + nCount)) << " ";
 	}
+	write << endl;
+	write.close();
 }
 
-void writeg(ofstream write, float *fSave, Polynomial oPolynomial){
-	for (int nCount =0; nCount <= 3; nCount++){
-		write << oPolynomial.Calculator(*(fSave + nCount));
+void writeg(string sFile, float *fSave,int nAmount, Polynomial oPolynomial){
+	ofstream write(sFile , ios::app|ios::out);
+	for (int nCount =0; nCount < nAmount; nCount++){
+		write << oPolynomial.Calculator(*(fSave + nCount)) << " ";
 	}
+	write << endl;
+	write.close();
 }
 
-void writeh(ofstream write, float *fSave, Polynomial oPolynomial){
-	for (int nCount =0; nCount <= 4; nCount++){
-		write << oPolynomial.Calculator(*(fSave + nCount));
+void writeh(string sFile, float *fSave,int nAmount, Polynomial oPolynomial){
+	ofstream write(sFile , ios::app|ios::out);
+	for (int nCount =0; nCount < nAmount; nCount++){
+		write << oPolynomial.Calculator(*(fSave + nCount)) << " ";
 	}
+	write << endl;
+	write.close();
 }
 
-void write(Polynomial *oPolynomial){
-	
-	);
-
+void write(void (*functocall)(string, float*,int ,Polynomial), string sFile, float *fSave,int nAmount, Polynomial oPolynomial){
+		(*functocall)(sFile, fSave, nAmount, oPolynomial);
+}
 
 int main(){
 	float pSave[3];
@@ -34,11 +50,31 @@ int main(){
 	while (!read.eof()) {
 		read >> pSave[0] >> pSave[1] >> pSave[2] >> nMin >> nMax >> nStep;
 	}
+	float pNumber[10];
+	int nCount = 0;
+	while (1){
+		pNumber[nCount] = nMin +nCount * nStep;
+		if ((pNumber[nCount++] + nStep) > nMax) break; 
+	}
 	read.close();
-	float f[2] = {3, pSave[0]};
+	float f[2] = {-3, pSave[0]};
 	float g[3] = {0, pSave[1], -3};
 	float h[4] = {-5, 0 , pSave[2], 7};
-	Polynomial oF = Polynomial(2, f);
-	Polynomial oG = Polynomial(3, g);
-	Polynomial oH = Polynomial(4, h);
+	Polynomial oF = Polynomial(1, f);
+	Polynomial oG = Polynomial(2, g);
+	Polynomial oH = Polynomial(3, h);
+	string sOut = "KHAOSAT.OUT";
+	void (*fPoint)(string ,float*,int ,Polynomial) = writef;
+	void (*gPoint)(string ,float*,int ,Polynomial) = writeg;
+	void (*hPoint)(string ,float*,int ,Polynomial) = writeh;
+	writeTitle(sOut, nCount, pNumber);
+	write(fPoint, sOut, pNumber, nCount, oF);
+	write(gPoint, sOut, pNumber, nCount, oG);
+	write(hPoint, sOut, pNumber, nCount, oH);
+	writeTitle(sOut, nCount, pNumber);
+	oF.writeDeri(sOut, pNumber, nCount);
+	oG.writeDeri(sOut, pNumber, nCount);
+	oH.writeDeri(sOut, pNumber, nCount);
+	system("pause");
+	return 0;
 }

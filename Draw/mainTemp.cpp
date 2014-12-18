@@ -26,7 +26,7 @@ void StartGraphic()
     int driver=0,mode;
     initgraph(&driver,&mode,"");
 }
-int main(int argc, char *argv[])
+int main1(int argc, char *argv[])
 {
 	StartGraphic();
     setbkcolor(GREEN);

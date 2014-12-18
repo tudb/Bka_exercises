@@ -18,7 +18,6 @@ Polynomial::Polynomial(int nDegree, float *pCoefficient){
 
 Polynomial::Polynomial(int nDegree){
 	m_nDegree = nDegree;
-	delete (m_pCoefficient);
 	m_pCoefficient = new float[nDegree+1];
 	for (int nCount = 0; nCount <= m_nDegree; nCount++){
 		m_pCoefficient[nCount] = 0;
@@ -65,26 +64,27 @@ float Polynomial::Calculator(float fValue){
 
 Polynomial Polynomial::derivative(int nTime){
 	Polynomial *oPolynomial;
-	Polynomial oTemp;
 	if (m_nDegree >= nTime) {
 		oPolynomial = new Polynomial(m_nDegree - nTime);
-		for (int nCountOut = nTime; nCountOut <= m_nDegree; nCountOut++)
-		for (int nCountIn = 0; nCountIn < nTime; nCountIn++)
-		oPolynomial->m_pCoefficient[nCountIn] *= nCountOut * m_pCoefficient[nTime];
+		for (int nCountIn = 0; nCountIn <= m_nDegree- nTime; nCountIn++)
+			oPolynomial->m_pCoefficient[nCountIn] = 1;
+		for (int nCountOut = nTime; nCountOut <= m_nDegree; nCountOut++){
+			for (int nCountIn = 0; nCountIn <= m_nDegree- nTime; nCountIn++)
+				oPolynomial->m_pCoefficient[nCountIn] *= nCountOut * m_pCoefficient[nCountOut];
+		}
 	}
 	else
-		oPolynomial = new Polynomial(0);
-	oTemp = Polynomial(*oPolynomial);
-	delete (oPolynomial);
-	return oTemp;
+	oPolynomial = new Polynomial(0);
+	return *oPolynomial;
 }
 
 void Polynomial::writeDeri(string sFile, float *pNumber, int nAmount){
 	ofstream write(sFile, ios::out|ios::app);
-	write
+	write << endl;
 	for (int nCount = 0;  nCount < nAmount; nCount++){
-		write << derivative(1).Calculator();
+		write << derivative(1).Calculator (*(pNumber + nCount)) << " ";
 	}
-
+	write << endl;
+}
 
 

@@ -64,11 +64,12 @@
   <ItemGroup>
     <ClCompile Include="bgiout.cxx" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Clock.cpp" />
     <ClCompile Include="dibutil.cxx" />
     <ClCompile Include="drawing.cxx" />
     <ClCompile Include="file.cxx" />
     <ClCompile Include="Geometry.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainTemp.cpp" />
     <ClCompile Include="misc.cxx" />
     <ClCompile Include="mouse.cxx" />
     <ClCompile Include="palette.cxx" />

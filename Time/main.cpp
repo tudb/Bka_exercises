@@ -22,3 +22,11 @@ int main(){
 	system("pause");
 }
 
+void Clock(){
+	float fAbscissa;
+	float fOrdane;
+	float fAlpha;
+	fAbscissa = (fAbscissa * cos(fAlpha) - fOrdane * sin(fAlpha));
+	fOrdane = (fAbscissa * sin(fAlpha) + fOrdane * cos(fAlpha));
+
+}

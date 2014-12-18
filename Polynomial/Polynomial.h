@@ -1,7 +1,9 @@
 ﻿#pragma once
 #include <math.h>
+#include <fstream>
 #include <iostream>
 #define NULL 0
+using namespace std;
 
 class Polynomial{
 	int m_nDegree;
@@ -17,6 +19,6 @@ public:
 	void import();//cẩn thận thừa vùng nhớ khi gọi 2 lần phương thức này
 	float Calculator(float fValue);
 	Polynomial derivative(int nTime);
-	void writeDeri(string sFile, float *pNumber, int nAmount);
+	void Polynomial::writeDeri(string sFile, float *pNumber, int nAmount);
 };
 
