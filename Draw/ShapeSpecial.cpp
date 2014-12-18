@@ -18,6 +18,10 @@ void ShapeSpecial::setPoint(Geometry *pGeometry){
 }
 
 void ShapeSpecial::import(){
+	for (int nCount = 0; nCount < 4; nCount++){
+		cout <<endl << "Import point " << nCount+1 << " : ";
+		m_pPoint[nCount].import();
+	}
 }
 
 void ShapeSpecial::draw(){

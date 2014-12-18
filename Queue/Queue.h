@@ -6,13 +6,14 @@ class Queue{
 public:
 	QueueNode *m_pHead;
 	QueueNode *m_pTail;
+	Queue(int nData);
 	Queue(void);
 	~Queue(void);
 	bool empty();
 	int size();
 	int back();
 	int front();
-	void push(int nData);
-	void pop();
+	int push(int nData);
+	int pop();
 };
 

@@ -27,7 +27,7 @@ void Geometry::setOrdane(float fOrdane){
 }
 
 void Geometry::import(){
-	cout << "Nhap hoanh do: " << endl;
+	cout << endl << "Nhap hoanh do: " << endl;
 	cin >> m_fAbscissa;
 	cout << "Nhap tung do: " << endl;
 	cin >> m_fOrdane;

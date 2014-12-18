@@ -6,5 +6,6 @@ public:
 	Parallelogram();
 	Parallelogram(Geometry *pGeometry);
 	~Parallelogram();
+	void import();
 };
 

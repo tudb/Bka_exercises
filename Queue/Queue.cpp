@@ -15,7 +15,7 @@ Queue::Queue(int nData){
 Queue::~Queue(){
 }
 
-void Queue::empty(){
+bool Queue::empty(){
 	if (m_pHead == NULL ) return true;
 	return false;
 }
@@ -40,17 +40,18 @@ int Queue::pop(){
 	QueueNode *pTemp;
 	pTemp = m_pHead;
 	m_pHead = m_pHead->m_pNext;
+	return 1;
 	delete (pTemp);
 }
 
 int Queue::front(){
-	if (!empty()) return m_pHead->m_nData);
+	if (!empty()) return m_pHead->m_nData;
 	else cout << endl << "Queue is empty return 0";
 	return 0;
 }
 
 int Queue::back(){
-	if (!empty()) return m_pTail->m_nData);
+	if (!empty()) return m_pTail->m_nData;
 	else cout << endl << "Queue is empty return 0";
 	return 0;
 }

@@ -12,12 +12,9 @@ Room::Room(int nNight){
 Room::~Room(void){
 }
 
-void Room::import(){
-	cout << endl << "Import ID: ";
-	cin.ignore();
-	getline(cin, m_sID);
-	cout << endl << "Import Free per night: ";
-	cin >> m_nNight;
+void Room::import(string sID, int nAmount){
+	m_sID = sID;
+	m_nNight = nAmount;
 }
 
 void Room::display(){

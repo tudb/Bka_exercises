@@ -4,7 +4,7 @@
 #include <fstream>
 using namespace std;
 
-void writef(ofstream write, float *fSave, Polynomial oPolynomial){
+void writef(strinh sFile, float *fSave, Polynomial oPolynomial){
 	for (int nCount =0; nCount <= 2; nCount++){
 		write << oPolynomial.Calculator(*(fSave + nCount));
 	}

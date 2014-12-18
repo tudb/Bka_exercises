@@ -6,5 +6,6 @@ public:
 	Trapezium(Geometry *pGeometry);
 	~Trapezium();
 	void setPoint(Geometry *pGeometry);
+	void import();
 };
 

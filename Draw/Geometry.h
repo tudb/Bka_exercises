@@ -16,3 +16,4 @@ public:
 	virtual void display();
 	virtual void draw();
 };
+

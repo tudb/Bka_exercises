@@ -79,6 +79,12 @@ Polynomial Polynomial::derivative(int nTime){
 	return oTemp;
 }
 
- 
+void Polynomial::writeDeri(string sFile, float *pNumber, int nAmount){
+	ofstream write(sFile, ios::out|ios::app);
+	write
+	for (int nCount = 0;  nCount < nAmount; nCount++){
+		write << derivative(1).Calculator();
+	}
+
 
 

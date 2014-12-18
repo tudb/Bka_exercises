@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -12,19 +12,19 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{729787C6-4A19-47B2-863C-798C0968F32F}</ProjectGuid>
-    <RootNamespace>Draw</RootNamespace>
+    <RootNamespace>bgi</RootNamespace>
+    <ProjectName>Draw</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -43,7 +43,6 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -55,7 +54,6 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -64,27 +62,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Circle.h" />
-    <ClInclude Include="dibapi.h" />
-    <ClInclude Include="dibutil.h" />
-    <ClInclude Include="Ellipse.h" />
-    <ClInclude Include="Geometry.h" />
-    <ClInclude Include="Parallelogram.h" />
-    <ClInclude Include="RectangleFake.h" />
-    <ClInclude Include="ShapeSpecial.h" />
-    <ClInclude Include="Square.h" />
-    <ClInclude Include="Trapezium.h" />
-    <ClInclude Include="winbgi.h" />
-    <ClInclude Include="winbgim.h" />
-    <ClInclude Include="winbgitypes.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="bgi.cxx" />
     <ClCompile Include="bgiout.cxx" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="dibutil.cxx" />
     <ClCompile Include="drawing.cxx" />
-    <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="file.cxx" />
     <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="main.cpp" />
@@ -99,6 +80,19 @@
     <ClCompile Include="Trapezium.cpp" />
     <ClCompile Include="winbgi.cxx" />
     <ClCompile Include="winthread.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dibutil.h" />
+    <ClInclude Include="Geometry.h" />
+    <ClInclude Include="graphics.h" />
+    <ClInclude Include="Parallelogram.h" />
+    <ClInclude Include="RectangleFake.h" />
+    <ClInclude Include="ShapeSpecial.h" />
+    <ClInclude Include="Square.h" />
+    <ClInclude Include="Trapezium.h" />
+    <ClInclude Include="winbgi.h" />
+    <ClInclude Include="winbgim.h" />
+    <ClInclude Include="winbgitypes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,5 +6,6 @@ public:
 	QueueNode *m_pNext;
 	QueueNode(void);
 	~QueueNode(void);
+	QueueNode(int nData);
 };
 

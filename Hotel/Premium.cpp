@@ -9,10 +9,9 @@ Premium::Premium(){
 Premium::~Premium(){
 }
 
-void Premium::import(){
-	Business::import();
-	cout << endl << "Import Free per a nigt: ";
-	cin >> m_nFreeNight;
+void Premium::import(string sID, int nNight, int nFreeNight){
+	Business::import(sID, nNight);
+	m_nFreeNight = nFreeNight;
 }
 
 void Premium::display(){
@@ -21,5 +20,28 @@ void Premium::display(){
 }
 
 int Premium::CalculatorFree(){
-	return ((m_nNight * 500000 + m_nFreeNight) * 1.05;
+	return ((m_nNight * 500000 + m_nFreeNight) * 1.05);
+}
+
+vector<Premium>Premium::getList(string sFile, int nStart, int nEnd){
+	int nCount = 0;
+	vector<Premium> tempVector;
+	string sRemove;
+	ifstream read(sFile, ios::in);
+	while (nCount < nStart) {
+		getline(read, sRemove);
+		nCount++
+	}
+	while (nCount <= nEnd){
+		Premium oTemp;
+		string sID;
+		int nNight;
+		float fFreeNight;
+		getline(read, sID);
+		read >> nNight >> fFreeNight;
+		oTemp.import(sID, nNight, fFreeNight);
+		tempVector.push_back(oTemp);
+		nCount++;
+	}
+	return tempVector;
 }

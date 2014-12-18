@@ -17,5 +17,6 @@ public:
 	void import();//cẩn thận thừa vùng nhớ khi gọi 2 lần phương thức này
 	float Calculator(float fValue);
 	Polynomial derivative(int nTime);
+	void writeDeri(string sFile, float *pNumber, int nAmount);
 };
 

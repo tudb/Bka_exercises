@@ -5,5 +5,6 @@ public:
 	Square();
 	Square(Geometry *pGeometry);
 	~Square();
+	void import();
 };
 

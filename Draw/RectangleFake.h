@@ -5,5 +5,6 @@ public:
 	RectangleFake();
 	RectangleFake(Geometry *pGeometry);
 	~RectangleFake();
+	void import();
 };
 
