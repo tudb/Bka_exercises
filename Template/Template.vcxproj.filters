@@ -15,36 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ArrayInt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="toIncrease.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ReduceAbs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EvenOdd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NegativeKnownSort.h">
+    <ClInclude Include="Short.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayInt.cpp">
+    <ClCompile Include="Short.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="toIncrease.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ReduceAbs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EvenOdd.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NegativeKnownSort.cpp">
+    <ClCompile Include="Template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

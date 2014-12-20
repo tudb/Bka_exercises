@@ -38,6 +38,7 @@ int Matrix::setMatrix(float **pMatrix){
 			m_pMatrix[nNumber1][nNumber2] = pMatrix[nNumber1][nNumber2];
 		}
 	}	
+	return 0;
 }
 
 void Matrix::import(){
@@ -59,17 +60,27 @@ void Matrix::show(){
 	}
 }
 
-Matrix Matrix::operator*(Matrix& oMatrix){
-	if (oMatrix.getColumn() != m_nRow) {
+void Matrix::import(int nRow, int nColumn){
+	m_nRow = nRow;
+	m_nColumn = nColumn;
+	m_pMatrix = new float*[m_nColumn];
+	for (int nNumber = 0; nNumber < m_nColumn; nNumber++){
+	m_pMatrix[nNumber] = new float[m_nRow];
+	}
+}
+
+Matrix Matrix::operator*(Matrix& tMatrix){
+	if (tMatrix.getColumn() != m_nRow) {
 		cout << "Khong the nhan" << endl;
 		return Matrix();
 	}
-	Matrix oMatrix = Matrix(oMatrix.m_nRow, oMatrix.m_nColumn);
+	Matrix oMatrix;
+	oMatrix.import(tMatrix.m_nRow, tMatrix.m_nColumn);
 	for (int nNumber1 = 0; nNumber1 < m_nRow; nNumber1++){	
 		for (int nNumber2 =0; nNumber2 < oMatrix.m_nRow; nNumber2++){
 			float nTotal = 0;
 			for (int nNumber3 = 0; nNumber3 < m_nColumn; nNumber3++){			
-				nTotal += m_pMatrix[nNumber1][nNumber3] * oMatrix.m_pMatrix[nNumber2][nNumber3];
+				nTotal += m_pMatrix[nNumber1][nNumber3] * tMatrix.m_pMatrix[nNumber2][nNumber3];
 			}
 			oMatrix.m_pMatrix[nNumber1][nNumber2] = nTotal;
 		}
@@ -102,4 +113,5 @@ Matrix Matrix::operator+(Matrix& oMatrix){
 				oMatrixTemp.m_pMatrix[nNumber1][nNumber2] = m_pMatrix[nNumber1][nNumber2] + oMatrix.m_pMatrix[nNumber1][nNumber2];
 			}
 	}
+	return oMatrixTemp;
 }

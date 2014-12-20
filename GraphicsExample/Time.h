@@ -20,8 +20,8 @@ public:
 	void setSecond(int nSecond);
 	Time operator+(const int& nAdd);
 	Time operator-(const int& nSub);
-	Time operator++();
-	Time operator--();
+	void operator++();
+	void operator--();
 	ostream& operator<<(ostream& os);
 	istream& operator>>(istream& is);
 	Time converter(int nSecond);	

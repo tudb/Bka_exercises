@@ -45,6 +45,8 @@ void write(void (*functocall)(string, float*,int ,Polynomial), string sFile, flo
 
 int main(){
 	float pSave[3];
+	float *a;
+	a = new float[10];
 	int nMin, nMax, nStep;
 	ifstream read("KHAOSAT.INP", ios::in);
 	while (!read.eof()) {
@@ -57,9 +59,9 @@ int main(){
 		if ((pNumber[nCount++] + nStep) > nMax) break; 
 	}
 	read.close();
-	float f[2] = {-3, pSave[0]};
-	float g[3] = {0, pSave[1], -3};
-	float h[4] = {-5, 0 , pSave[2], 7};
+	float f[] = {-3, pSave[0]};
+	float g[] = {0, pSave[1], -3};
+	float h[] = {-5, 0 , pSave[2], 7};
 	Polynomial oF = Polynomial(1, f);
 	Polynomial oG = Polynomial(2, g);
 	Polynomial oH = Polynomial(3, h);

@@ -7,8 +7,9 @@ using namespace std;
 
 class Polynomial{
 	int m_nDegree;
-	float *m_pCoefficient;;
-	Polynomial(int nDegree);;
+	float *m_pCoefficient;
+	Polynomial(int nDegree);
+	Polynomial(int nDegree, int nNumber);
 public:
 	Polynomial();
 	Polynomial(const Polynomial& oPolynomial);

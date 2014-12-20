@@ -30,18 +30,20 @@ vector<Premium>Premium::getList(string sFile, int nStart, int nEnd){
 	ifstream read(sFile, ios::in);
 	while (nCount < nStart) {
 		getline(read, sRemove);
-		nCount++
+		nCount++;
 	}
 	while (nCount <= nEnd){
 		Premium oTemp;
 		string sID;
 		int nNight;
 		float fFreeNight;
+		if (int(read.tellg()) != read.beg)
+			read.ignore();
 		getline(read, sID);
 		read >> nNight >> fFreeNight;
 		oTemp.import(sID, nNight, fFreeNight);
 		tempVector.push_back(oTemp);
-		nCount++;
+		nCount += 3;
 	}
 	return tempVector;
 }

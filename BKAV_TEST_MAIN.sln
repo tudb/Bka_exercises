@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Time", "Time\Time.vcxproj", "{1693A96A-D979-47C0-A42D-6E6DFD91C862}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Geometry", "Geometry\Geometry.vcxproj", "{5CB42A77-F58D-42F3-AC32-6EA8E9636BDE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Math", "Math\Math.vcxproj", "{CCDC71AC-9E4F-4B04-A64F-C6F4A3B70F95}"
@@ -37,16 +35,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hotel", "Hotel\Hotel.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Draw", "Draw\Draw.vcxproj", "{729787C6-4A19-47B2-863C-798C0968F32F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsExample", "GraphicsExample\GraphicsExample.vcxproj", "{8668C320-095E-4CD6-9A46-36F352B0F5E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1693A96A-D979-47C0-A42D-6E6DFD91C862}.Debug|Win32.ActiveCfg = Debug|Win32
-		{1693A96A-D979-47C0-A42D-6E6DFD91C862}.Debug|Win32.Build.0 = Debug|Win32
-		{1693A96A-D979-47C0-A42D-6E6DFD91C862}.Release|Win32.ActiveCfg = Release|Win32
-		{1693A96A-D979-47C0-A42D-6E6DFD91C862}.Release|Win32.Build.0 = Release|Win32
 		{5CB42A77-F58D-42F3-AC32-6EA8E9636BDE}.Debug|Win32.ActiveCfg = Debug|Win32
 		{5CB42A77-F58D-42F3-AC32-6EA8E9636BDE}.Debug|Win32.Build.0 = Debug|Win32
 		{5CB42A77-F58D-42F3-AC32-6EA8E9636BDE}.Release|Win32.ActiveCfg = Release|Win32
@@ -115,6 +111,10 @@ Global
 		{729787C6-4A19-47B2-863C-798C0968F32F}.Debug|Win32.Build.0 = Debug|Win32
 		{729787C6-4A19-47B2-863C-798C0968F32F}.Release|Win32.ActiveCfg = Release|Win32
 		{729787C6-4A19-47B2-863C-798C0968F32F}.Release|Win32.Build.0 = Release|Win32
+		{8668C320-095E-4CD6-9A46-36F352B0F5E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8668C320-095E-4CD6-9A46-36F352B0F5E9}.Debug|Win32.Build.0 = Debug|Win32
+		{8668C320-095E-4CD6-9A46-36F352B0F5E9}.Release|Win32.ActiveCfg = Release|Win32
+		{8668C320-095E-4CD6-9A46-36F352B0F5E9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

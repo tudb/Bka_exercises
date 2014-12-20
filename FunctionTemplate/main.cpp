@@ -20,8 +20,8 @@ T FindMax(T* pT1, int nSize){
 	for (int tCount = 0; tCount < nSize; tCount++){
 		if (*(pT1 + tCount) > tMax) tMax = *(pT1 + tCount);
 	}
-	else return tMax;
-	cout << "Khong ton tai so nguyen duong lon nhat";
+	if (tMax > 0) return tMax;
+	else cout << "Khong ton tai so nguyen duong lon nhat";
 }
 
 template<class T>

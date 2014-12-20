@@ -14,6 +14,7 @@ public:
 	int** getMatrix();
 	int setMatrix(float **fMatrix);
 	int getColumn();
+	void import(int ,int);
 	void import();
 	void show();
 	Matrix operator*(Matrix& oMatrix);

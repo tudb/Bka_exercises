@@ -30,7 +30,7 @@ vector<Deluxe> Deluxe::getList(string sFile, int nStart, int nEnd){
 	ifstream read(sFile, ios::in);
 	while (nCount < nStart) {
 		getline(read, sRemove);
-		nCount++
+		nCount++;
 	}
 	while (nCount <= nEnd){
 		Deluxe oTemp;
@@ -38,11 +38,14 @@ vector<Deluxe> Deluxe::getList(string sFile, int nStart, int nEnd){
 		int nNight;
 		int nFreeNight;
 		float fFreeService;
+		if (int(read.tellg()) != read.beg)
+			read.ignore();
 		getline(read, sID);
+		read.ignore();
 		read >> nNight >> nFreeNight >> fFreeService;
 		oTemp.import(sID, nNight,nFreeNight ,fFreeService);
 		tempVector.push_back(oTemp);
-		nCount++;
+		nCount += 4;
 	}
 	return tempVector;
 }

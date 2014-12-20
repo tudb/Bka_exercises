@@ -7,7 +7,12 @@ String::String(){
 	m_pString = new char[m_nSizeMax];
 }
 
-String::String(int nSize){
+String::String(int nSize, char *pString){
+	m_nSizeMax = nSize;
+	m_pString = pString;
+}
+
+void String::import(int nSize){
 	m_nSizeMax = nSize;
 	m_pString = new char[nSize];
 }
@@ -69,9 +74,10 @@ void String::operator=(String& oString){
 	m_nSizeMax = oString.getSizeMax();
 	m_pString = oString.getString();
 }
-  String::operator+(const String& oString){
-	 String oTemp = String(oString.getSizeMax() + m_nSizeMax);
-	 for (int nCount = 0; nCount < oTemp.getSizeMax(); nCount++){
+String String::operator+(const String& oString){
+	String oTemp;
+	oTemp.import(oString.m_nSizeMax + m_nSizeMax);
+	for (int nCount = 0; nCount < oTemp.m_nSizeMax; nCount++){
 		 if (nCount < m_nSizeMax)
 		 oTemp.m_pString[nCount] = m_pString[nCount];
 		 else {

@@ -8,6 +8,7 @@ Node::Node(){
 
 Node::Node(int nData){
 	m_nData = nData;
+}
 
 Node::~Node(void)
 {

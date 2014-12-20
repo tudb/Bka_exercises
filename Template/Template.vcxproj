@@ -18,7 +18,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -64,18 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ArrayInt.h" />
-    <ClInclude Include="EvenOdd.h" />
-    <ClInclude Include="NegativeKnownSort.h" />
-    <ClInclude Include="ReduceAbs.h" />
-    <ClInclude Include="toIncrease.h" />
+    <ClInclude Include="Short.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayInt.cpp" />
-    <ClCompile Include="EvenOdd.cpp" />
-    <ClCompile Include="NegativeKnownSort.cpp" />
-    <ClCompile Include="ReduceAbs.cpp" />
-    <ClCompile Include="toIncrease.cpp" />
+    <ClCompile Include="Short.cpp" />
+    <ClCompile Include="Template.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -69,7 +69,6 @@
     <ClCompile Include="drawing.cxx" />
     <ClCompile Include="file.cxx" />
     <ClCompile Include="Geometry.cpp" />
-    <ClCompile Include="mainTemp.cpp" />
     <ClCompile Include="misc.cxx" />
     <ClCompile Include="mouse.cxx" />
     <ClCompile Include="palette.cxx" />

@@ -5,8 +5,9 @@ private:
 	int m_nSizeMax;
 public:
 	String();
-	String(int nSize, String *pString);
+	String(int nSize, char *pString);
 	~String();
+	void import(int nSize);
 	int getSizeMax();
 	char* getString();
 	void setSizeMax(int nSizeMax);

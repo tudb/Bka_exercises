@@ -60,12 +60,12 @@ Time Time::operator-(const int& nSub){
 	return converter(timeToSecond() - nSub);
 }
 
-Time Time::operator++(){
-	return converter(timeToSecond() + 1);
+void Time::operator++(){
+	*this = converter(timeToSecond() + 1);
 }
 
-Time Time::operator--(){
-	return converter(timeToSecond() + 1);
+void Time::operator--(){
+	*this = converter(timeToSecond() + 1);
 }
 
 ostream& Time::operator<<(ostream& os){
