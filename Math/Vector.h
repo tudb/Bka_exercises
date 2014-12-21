@@ -1,4 +1,9 @@
-#pragma once
+﻿#pragma once
+
+//-----------------------------------------------------------------
+//Description: Môn phỏng vector hình học nhiều chiều cùng các phép toán cơ bản
+//-----------------------------------------------------------------
+
 class Vector{
 private:
 	int m_nSide;

@@ -1,6 +1,10 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #define MAX 100
+
+//-----------------------------------------------------------------
+//Description: Môn phỏng stack sử dụng mảng
+//-----------------------------------------------------------------
 
 class ArrayStack{
 private:

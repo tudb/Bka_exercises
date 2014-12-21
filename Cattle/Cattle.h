@@ -1,6 +1,11 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 using namespace std;
+
+//------------------------------------------------------------------------------
+//Description: Lớp trừu tượng mô tả các động vật với các thuộc tính : số sữa cho,
+//số lượng, số con sinh ra, cùng các phương thức : lấy ra số sữa, số con , âm thanh
+//-----------------------------------------------------------------------------
 
 class Cattle{
 protected : 

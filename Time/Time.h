@@ -26,4 +26,5 @@ public:
 	istream& operator>>(istream& is);
 	Time converter(int nSecond);	
 	int timeToSecond();
+	friend class TimeSpan;
 };

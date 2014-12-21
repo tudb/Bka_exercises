@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <stdlib.h>
 #include <ctype.h>
@@ -7,6 +7,12 @@
 #include <fstream>
 #include <math.h>
 using namespace std;
+
+//-----------------------------------------------------------------
+//Lớp trừu tượng khách hàng với các thuộc tính: tên, số hàng đã mua
+//và đơn giá , và các phương thức: get, set, hàm ảo Calculator();
+//-----------------------------------------------------------------
+
 
 class Customer{
 protected :

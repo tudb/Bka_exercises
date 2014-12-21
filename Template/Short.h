@@ -8,11 +8,8 @@ class Short{
 public:
 	Short(void);
 	~Short(void);
-	void copy(int*, int*);
-	void permute(int* , int* );
 	void import();
 	void sortReduce();
 	void sortRaise();
-	void sortEven();
 };
 

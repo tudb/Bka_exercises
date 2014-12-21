@@ -1,4 +1,9 @@
-#pragma once
+﻿#pragma once
+
+//-----------------------------------------------------------------
+//Description: Môn phỏng kiểu sô nguyên int cùng các phép toán cơ bản
+//-----------------------------------------------------------------
+
 class INTEGER{
 private:
 	int m_nInt;

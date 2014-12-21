@@ -67,13 +67,11 @@
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="IntegerNumber.h" />
-    <ClInclude Include="StackNode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrayStack.cpp" />
     <ClCompile Include="IntegerNumber.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="StackNode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

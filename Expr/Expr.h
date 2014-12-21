@@ -1,8 +1,16 @@
-#pragma once
+﻿#pragma once
 #include <vector>
 #include <string>
 #include <stack>
 using namespace std;
+
+//-----------------------------------------------------------------
+//Description: Lớp mô tả xử lí với 1 xâu kí tự đầu vào là biểu 
+//thức trung tố, các phương thức sẽ chuyển xâu về dạng trung tố và xử lí 
+//Thuộc tính: xâu biểu thức
+//Phương thức: chuyển biểu thức trung tố sang hậu tố rồi tính
+//-----------------------------------------------------------------
+
 class Expr{
 private:
 	string m_sString;

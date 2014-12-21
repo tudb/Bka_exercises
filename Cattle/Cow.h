@@ -2,6 +2,7 @@
 #include "Cattle.h"
 #include <iostream>
 using namespace std;
+
 class Cow :	public Cattle{
 public:
 	Cow();

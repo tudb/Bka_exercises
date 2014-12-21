@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Surpport">
+      <UniqueIdentifier>{a922094f-a8f2-4b3b-887a-f2f30dedf9b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dibutil.h">
@@ -36,38 +39,11 @@
     <ClInclude Include="Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TimeSpan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bgiout.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dibutil.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="drawing.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="file.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="misc.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mouse.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="palette.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="text.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="winbgi.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="winthread.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Clock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -75,6 +51,39 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bgiout.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="dibutil.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="drawing.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="mouse.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="palette.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="winbgi.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="winthread.cxx">
+      <Filter>Source Files\Surpport</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSpan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

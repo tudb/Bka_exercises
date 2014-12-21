@@ -1,4 +1,9 @@
-#pragma once
+﻿#pragma once
+
+//-----------------------------------------------------------------
+//Description: Môn phỏng kiểu dữ liệu string cùng các phép toán cơ bản
+//-----------------------------------------------------------------
+
 class String{
 private:
 	char* m_pString;

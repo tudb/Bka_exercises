@@ -5,6 +5,12 @@
 #define NULL 0
 using namespace std;
 
+//-----------------------------------------------------------------
+//Description: Mô phỏng lớp đa thức
+//Thuộc tính:gồm có bậc và mảng chứa hệ số
+//Phương thức: đạo hàm, tính kết quả, ghi ra file..
+//-----------------------------------------------------------------
+
 class Polynomial{
 	int m_nDegree;
 	float *m_pCoefficient;

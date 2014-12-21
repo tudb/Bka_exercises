@@ -1,5 +1,10 @@
-#pragma once
+﻿#pragma once
 #include "customer.h"
+
+//-----------------------------------------------------------------
+// Description: Khách hàng loại B với phương thức tính tiền riêng
+//-----------------------------------------------------------------
+
 class Y : public Customer{
 private:
 	int m_nIntimateYear;

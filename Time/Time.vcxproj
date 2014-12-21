@@ -80,6 +80,7 @@
     <ClInclude Include="dibutil.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="TimeSpan.h" />
     <ClInclude Include="winbgi.h" />
     <ClInclude Include="winbgim.h" />
     <ClInclude Include="winbgitypes.h" />
@@ -96,6 +97,7 @@
     <ClCompile Include="palette.cxx" />
     <ClCompile Include="text.cxx" />
     <ClCompile Include="Time.cpp" />
+    <ClCompile Include="TimeSpan.cpp" />
     <ClCompile Include="winbgi.cxx" />
     <ClCompile Include="winthread.cxx" />
   </ItemGroup>

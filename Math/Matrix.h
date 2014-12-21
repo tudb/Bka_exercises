@@ -1,5 +1,10 @@
-#pragma once
+﻿#pragma once
 #include "Vector.h"
+
+//-----------------------------------------------------------------
+//Description: Mô phỏng ma trận sử dụng mảng 2 chiều với các số nguyên
+// đơn giản
+//-----------------------------------------------------------------
 
 class Matrix{
 private:

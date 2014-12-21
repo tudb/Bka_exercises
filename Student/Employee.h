@@ -1,6 +1,12 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 using namespace std;
+
+//-----------------------------------------------------------------
+//Description: Mô tả các thông tin về nhân viên cùng các phương thức
+//cần thiết, là lớp cha của các lớp nhân viên văn phòng và người sản xuất
+//-----------------------------------------------------------------
+
 class Employee{
 protected:
 	string m_sName;

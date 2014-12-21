@@ -6,4 +6,6 @@ int main(){
 	String test;
 	test.import();
 	cout << test.getString();
+
+
 }

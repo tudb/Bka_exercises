@@ -113,5 +113,4 @@ Matrix Matrix::operator+(Matrix& oMatrix){
 				oMatrixTemp.m_pMatrix[nNumber1][nNumber2] = m_pMatrix[nNumber1][nNumber2] + oMatrix.m_pMatrix[nNumber1][nNumber2];
 			}
 	}
-	return oMatrixTemp;
 }

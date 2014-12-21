@@ -22,16 +22,23 @@ int StringToInt(string str){
 }
 
  void ReadAndWrite(){
+	int pAmount[3];
+	ifstream read("XYZ.INP", ios::in);
+	read >> pAmount[0] >> pAmount[1] >> pAmount[2];
+	read.close();
 	ifstream fileRead;
 	fileRead.open("XYZ.INP", ios::in);
 	ofstream fileWrite("XYZ.OUT", ios::out);
+	string temp;
+	getline(fileRead, temp); 
 	int nPosition = 0;
 	int nCode = 0;
 	int nTotal = 0; 
+	fileWrite << pAmount[0] << " " << pAmount[1] << " " << pAmount[2] << endl;
 		while (!fileRead.eof()){
 			string sName;
-			if (int(fileRead.tellg()) != fileRead.beg)
-				fileRead.ignore();
+			getline(fileRead, sName);
+			if (sName == "") 
 			getline(fileRead, sName);
 			int nAmount;
 			int nPrice;

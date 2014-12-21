@@ -82,6 +82,7 @@ Polynomial Polynomial::derivative(int nTime){
 				oPolynomial->m_pCoefficient[nCountOut] *= nCountIn;
 			}
 			oPolynomial->m_pCoefficient[nCountOut] *= m_pCoefficient[nCountOut + nTime];
+			cout << oPolynomial->m_pCoefficient[nCountOut] << "  ";
 		}
 	}
 	else

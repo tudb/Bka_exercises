@@ -1,6 +1,12 @@
-#pragma once
+﻿#pragma once
 #include "Node.h"
 #include <iostream>
+
+//-----------------------------------------------------------------
+//Description: Danh sách liên kết mô tả bằng danh sách các Node
+//Thuộc tính: con trỏ đến Node đầu tiên
+//Phương thức: chèn cuối , chèn vào vị trí bất kì,gỡ,xuất phần tử
+//-----------------------------------------------------------------
 
 class ListNode{
 public:
