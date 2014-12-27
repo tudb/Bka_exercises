@@ -25,7 +25,7 @@ void Geometry::setAbscissa(float fAbscissa){
 void Geometry::setOrdane(float fOrdane){
 	m_fOrdane = fOrdane;
 }
-
+// Sao khong thu chong chat toan cu << o day
 void Geometry::import(){
 	cout << endl << "Nhap hoanh do: " << endl;
 	cin >> m_fAbscissa;
